@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { MapServiceService } from './../services/map-service.service';
+import { IssService } from './../services/iss.service';
 import { Subscription } from 'rxjs';
 import { GoogleMapsAPIWrapper } from '@agm/core';
 import { Marker } from '../marker';
@@ -25,7 +25,7 @@ export class Part1Component implements OnInit {
   ];
 
   constructor(
-    private mapServiceService: MapServiceService,
+    private issService: IssService,
     private googleMapsAPIWrapper: GoogleMapsAPIWrapper
   ) { }
 
@@ -34,7 +34,7 @@ export class Part1Component implements OnInit {
   }
 
   getPositions() {
-    this.mapServiceService
+    this.issService
       .getPositions()
       .subscribe(res => {
         this.iss_lat = res.lat;

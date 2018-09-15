@@ -1,15 +1,15 @@
 import { TestBed, inject } from '@angular/core/testing';
 
-import { MapServiceService } from './map-service.service';
+import { IssService } from './iss.service';
 
-describe('MapServiceService', () => {
+describe('IssService', () => {
   beforeEach(() => {
     TestBed.configureTestingModule({
-      providers: [MapServiceService]
+      providers: [IssService]
     });
   });
 
-  it('should be created', inject([MapServiceService], (service: MapServiceService) => {
+  it('should be created', inject([IssService], (service: IssService) => {
     expect(service).toBeTruthy();
   }));
 });

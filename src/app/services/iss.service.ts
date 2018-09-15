@@ -5,7 +5,7 @@ import { map } from 'rxjs/operators';
 @Injectable({
   providedIn: 'root'
 })
-export class MapServiceService {
+export class IssService {
 
   constructor(
     private http: HttpClient

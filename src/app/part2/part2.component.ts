@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { AstrosService } from './../services/astros.service';
+import { Person } from '../person';
 
 @Component({
   selector: 'app-part2',
@@ -7,9 +9,24 @@ import { Component, OnInit } from '@angular/core';
 })
 export class Part2Component implements OnInit {
 
-  constructor() { }
+  people: Person[] = [];
+  total = 0;
+
+  constructor(
+    private astrosService: AstrosService
+  ) { }
 
   ngOnInit() {
+    this.getAstros();
+  }
+
+  getAstros() {
+    this.astrosService
+      .getAstros()
+      .subscribe((res: any) => {
+        this.people = res.people;
+        this.total = res.number;
+      });
   }
 
 }

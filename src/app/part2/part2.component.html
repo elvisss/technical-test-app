@@ -1,3 +1,14 @@
-<p>
-  part2 works!
-</p>
+<h2>People in the space <span class="budge">{{ total }}</span></h2>
+
+<table class="table table-striped" *ngIf="people.length">
+  <thead>
+    <tr>
+      <th scope="col">Name</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let person of people">
+        <td>{{ person.name }}</td>
+    </tr>
+  </tbody>
+</table>
