@@ -1,0 +1,8 @@
+<agm-map [latitude]="lat" [longitude]="lng" [zoom]="2">
+  <agm-marker [latitude]="iss_lat" [longitude]="iss_lng"></agm-marker>
+
+  <agm-polygon [fillColor]="red"
+       [fillOpacity]="0.5" [paths]="triangleCoords"
+       [strokeColor]="blue" [strokeOpacity]="0.6" [strokeWeight]="2"
+       [visible]="true" [zIndex]="1"></agm-polygon>
+</agm-map>
