@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { HttpClientModule } from '@angular/common/http';
 import { AgmCoreModule } from '@agm/core';
+import { GoogleMapsAPIWrapper } from '@agm/core';
 
 import { AppComponent } from './app.component';
 import { Part1Component } from './part1/part1.component';
@@ -22,7 +23,7 @@ import { Part2Component } from './part2/part2.component';
       apiKey: 'AIzaSyBX4D2ABvJBlhKbjCE5vOF2PAr9fjDRp7I'
     })
   ],
-  providers: [],
+  providers: [ GoogleMapsAPIWrapper ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

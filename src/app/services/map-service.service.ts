@@ -15,7 +15,13 @@ export class MapServiceService {
 
   getPositions() {
     return this.http.get(this.url)
-      .pipe(map((res: any) => res.iss_position))
+      .pipe(map((res: any) => {
+        const data = {
+          lat: parseInt(res.iss_position.latitude, 10),
+          lng: parseInt(res.iss_position.longitude, 10)
+        };
+        return data;
+      }));
   }
 
 }
